@@ -1,5 +1,12 @@
 <?php
 
+$paragraph = $_POST['paragraph'];
+$name = $_POST['name'];
+
+$explosionName = explode(' ', $name);
+$nameWords = count($explosionName);
+
+
 
 ?>
 
@@ -21,17 +28,9 @@ HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="a
   <div class="container my-5">
     <div class="row">
       <div class="offset-3 col-6">
-        <form action="landing-form-post.php" method="POST">
-          <div class="mb-3">
-            <label class="form-label">Scrivi il problema</label>
-            <textarea class="form-control" id="paragraph" name="paragraph" rows="10" placeholder="Scrivi un paragrafo"></textarea>
-            <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="Paragrafo"> -->
-          <div class="mb-3">
-            <label class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Nome">
-          </div>
-          <button type="submit" class="btn btn-primary">Invia</button>
-        </form>
+        <span>Lunghezza testo: <?php echo strlen($paragraph) ?> </span>
+        <h2><strong>Richiesta del problema:</strong> <?php echo $paragraph ?></h2>
+        <h2><strong>Nome Autore:</strong> ***</h2>
       </div> 
     </div>
   </div>
