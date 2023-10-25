@@ -1,12 +1,10 @@
 <?php
 
 $paragraph = $_POST['paragraph'];
-$name = $_POST['name'];
+$censure = $_POST['censure'];
 
-$explosionName = explode(' ', $name);
-$nameWords = count($explosionName);
-
-
+// Il primo parametro è l'elemento da cercare, il secondo è la parola che ma inserire al posto della prima, il terzo è la stringa da visualizzare,li quarto è un contatore che indica il numero delle sostituzioni
+$paragraphCensere = str_ireplace($censure,"***",$paragraph)
 
 ?>
 
@@ -29,8 +27,9 @@ HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="a
     <div class="row">
       <div class="offset-3 col-6">
         <span>Lunghezza testo: <?php echo strlen($paragraph) ?> </span>
-        <h2><strong>Richiesta del problema:</strong> <?php echo $paragraph ?></h2>
-        <h2><strong>Nome Autore:</strong> ***</h2>
+        <h2 class="mb-5"><strong>Testo normale:</strong> <?php echo $paragraph ?></h2>
+        <span>Lunghezza testo censurato: <?php echo strlen($paragraphCensere) ?> </span>
+        <h2><strong>Testo censurato:</strong> <?php echo $paragraphCensere?></h2>
       </div> 
     </div>
   </div>
